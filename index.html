@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Your Survey!</h1>
+        <form id="multiStepForm">
+            <div class="form-step active" id="step1">
+                <h2>Step 1: Basic Information</h2>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <div class="form-step" id="step2">
+                <h2>Step 2: Your Preferences</h2>
+                <label for="preference">What's your favorite color?</label>
+                <select id="preference" name="preference">
+                    <option value="">Select an option</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="comments">Any additional comments?</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <div class="form-step" id="step3">
+                <h2>Step 3: Confirmation</h2>
+                <p>Please review your information before submitting.</p>
+                <div id="summary">
+                    </div>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="submit" class="submit-btn">Submit Form</button>
+            </div>
+
+            <div class="form-step" id="successMessage" style="display: none;">
+                <h2>Thank You!</h2>
+                <p>Your form has been submitted successfully.</p>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
